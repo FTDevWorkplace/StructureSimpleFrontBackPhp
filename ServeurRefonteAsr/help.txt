@@ -1,0 +1,15 @@
+.htaccess
+
+Permet de prendre la query string  "?page=" et prendre la partie d'apres pour faire le systeme de routage
+Pour pouvoir écrire des / avec contenu apres a la place
+
+
+
+index.php
+
+define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") .
+        "://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
+
+permet de toujours pointer vers la racine de notre site
+Tout le temps utiliser une url qui part du départ en chemin absolu
+
